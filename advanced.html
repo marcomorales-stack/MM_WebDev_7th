@@ -1,24 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>HTML Avanced Notes</title>
+        <title>HTML Advanced Notes</title>
         <meta charset="UTF-8">
+        <style>
+            /* Cascading Style Sheets 
+            1. Selector => says what to change
+            2. Declaration
+                a. Property => What about the element to change
+                b. Value => How to change it
+            */
+            body{
+                color:rgb(55, 55, 243);
+                background-color:black;
+                border: inset 5px #104fc4;
+            }
+            h1{
+                text-align: center;
+            }
+            #even{
+                color: rgb(88, 4, 88);
+                text-decoration: underline;
+            }
+            .lists{
+                width: 50%;
+                background-color: royalblue;
+                border-radius: 5px;
+                font-size: .75rem;
+            }
+
+        </style>
     </head>
     <body>
-        <h1>HTML Avanced Notes</h1>
+        <h1>HTML Advanced Notes</h1>
+        <div class="lists">
         <h3>Lists:</h3>
         <ol>
 
             <li>Alex</li>
-            <li>Katie</li>
+            <li id="even">Katie</li>
             <li>Andrew</li>
-            <li>Vienna</li>
+            <li id="even">Vienna</li>
         </ol>
         <ul>
             <li><a href="https://www.crandallsfruitfarm.com/" target="_blank">Apple</a> </li>
-            <li>Orange</li>
+            <li id="even">Orange</li>
             <li>Banana</li>
-            <li>Peach</li>
+            <li id="even">Peach</li>
         </ul>
         <dl>
             <dt>Fall</dt>
@@ -29,11 +57,11 @@
             <dd>Hanukkah</dd>
             <dd>New Years</dd>
         </dl>
+        </div>
         <h3>Attributes: </h3>
         <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Mount_Timpanogos_at_sunset.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="MT Timp" width="250px">
         <p>Image from: Wikimedia Commons</p>
         <img src="Winter_Timp.jpg" alt="Another Timp" width="250px">
         <p>Image From: <a href="https://commons.wikimedia.org/wiki/File:Mount_Timpanogos_-_01-07-08.jpg" target="_blank">Wikimedia Commons<a> </p>
-    </body>>
+    </body>
 </html>
-
