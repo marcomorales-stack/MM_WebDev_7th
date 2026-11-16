@@ -27,8 +27,8 @@
                 display: flex;
                 flex-direction:row;
                 justify-content: space-around;
-                align-items: normal;
-                flex-wrap: wrap;
+                align-items: baseline;
+                flex-wrap: initial;
                 margin-top: 25px;
                 padding: 25px
             }
@@ -62,6 +62,34 @@
         <img id="Soccer-Post2" src="https://cdn.shopify.com/s/files/1/0570/1609/0802/files/Mechanicsburg-PA.jpg?v=1740763457&height=1200&width=1200" alt=" Another Soccer Post Store">
         <p>Image From: <a href="https://soccerpost.com/tools/locations/locations/mechanicsburg-soccer-post?srsltid=AYCX9vLArOQ7NcgsFVa0Kn5f0XhUSqADLWU4vUpNsF_IVSLmwM8gntO2" target="_blank">Soccer Post</a> </p>
         </div>
-        </div>  
+        <div id="box"> 
+        <img id="Soccer-Post3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUtqgteK5WNWRdLuSeaUY6ypG2XC5IHGsnm1xPmSBR8g&s" alt=" Another Soccer Post Store" onmouseenter="rotate()">
+        <p>Image From: <a href="https://soccerpost.com/tools/locations/locations/mechanicsburg-soccer-post?srsltid=AYCX9vLArOQ7NcgsFVa0Kn5f0XhUSqADLWU4vUpNsF_IVSLmwM8gntO2" target="_blank">Soccer Post</a> </p>
+        <button onclick="showHide()"> click me!</button> 
+            <script>
+                let images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu_Xo-gKCzSjBAxPQ1vdX1HgPMGDFMHQtJuKnJYzNBsw&s=10"]
+                let currentImage = 0
+                function rotate(){
+                    currentImage += 1
+                    document.getElementById("Soccer-Post3").src = images[currentImage]
+                    if (currentImage > 2){
+                        currentImage = 0 
+                    }
+                    
+                }
+                function changeColor(){
+                    let currentColor = document.getElementById ("newColor").value
+                    document.getElementById("box").style.backgroundColor = currentColor
+                }
+                function showHide(){
+                    let item = document.getElementById("flex-wrapper")
+                    if(item.style.display == "flex"){
+                        item.style.display ="none"
+                        document.getElementById("text").innerHTML = "show Less"
+                }else{
+                    item.style.display = "flex"
+                }
+            }
+            </script>
     </body>
 </html> 
