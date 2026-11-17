@@ -11,7 +11,7 @@
                 font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             }
              h1{
-                text-align: center;
+               text-align: center;
             }
              #Soccer-Post1 {
                 border: inset 5px #104fc4;
@@ -23,6 +23,12 @@
                 width: 250px;
                 height: 225px;
             }
+            #Soccer-Post3{
+                border: inset 5px #104fc4;
+                width: 250px;
+                height:225px;
+
+            }
             #flex-wrapper{
                 display: flex;
                 flex-direction:row;
@@ -30,7 +36,7 @@
                 align-items: baseline;
                 flex-wrap: initial;
                 margin-top: 25px;
-                padding: 25px
+                padding: 25px;
             }
 
         </style>
@@ -66,13 +72,16 @@
         <img id="Soccer-Post3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUtqgteK5WNWRdLuSeaUY6ypG2XC5IHGsnm1xPmSBR8g&s" alt=" Another Soccer Post Store" onmouseenter="rotate()">
         <p>Image From: <a href="https://soccerpost.com/tools/locations/locations/mechanicsburg-soccer-post?srsltid=AYCX9vLArOQ7NcgsFVa0Kn5f0XhUSqADLWU4vUpNsF_IVSLmwM8gntO2" target="_blank">Soccer Post</a> </p>
         <button onclick="showHide()"> click me!</button> 
+        <div id="67">
+
+        </div>
             <script>
-                let images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu_Xo-gKCzSjBAxPQ1vdX1HgPMGDFMHQtJuKnJYzNBsw&s=10"]
+                let images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUtqgteK5WNWRdLuSeaUY6ypG2XC5IHGsnm1xPmSBR8g&s", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu_Xo-gKCzSjBAxPQ1vdX1HgPMGDFMHQtJuKnJYzNBsw&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUtqgteK5WNWRdLuSeaUY6ypG2XC5IHGsnm1xPmSBR8g&s"]
                 let currentImage = 0
                 function rotate(){
                     currentImage += 1
                     document.getElementById("Soccer-Post3").src = images[currentImage]
-                    if (currentImage > 2){
+                    if (currentImage > 1){
                         currentImage = 0 
                     }
                     
@@ -82,7 +91,7 @@
                     document.getElementById("box").style.backgroundColor = currentColor
                 }
                 function showHide(){
-                    let item = document.getElementById("flex-wrapper")
+                    let item = document.getElementById("67")
                     if(item.style.display == "flex"){
                         item.style.display ="none"
                         document.getElementById("text").innerHTML = "show Less"
