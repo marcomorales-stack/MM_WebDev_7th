@@ -9,6 +9,7 @@
                 background-color:black;
                 border: inset 5px #104fc4;
                 font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                padding: 25px;
             }
              h1{
                text-align: center;
@@ -38,6 +39,10 @@
                 margin-top: 25px;
                 padding: 25px;
             }
+            #switch{
+               display: none; 
+               flex-wrap: wrap;
+            }
 
         </style>
 
@@ -51,6 +56,7 @@
         <p>You should play soccer because it can be good for your heath cause you run and the burns carbs. It can also make you be more social because you have to talk to your teamates. And they also you can make new friends on the team, school or anywhere else. It can also make you money so if you wanna go pro you can play soccer and you make a lot of money so you can buy a lot of pretty things if you like.</p>
         </body>
         <ol>
+        <div id="switch">
         <h2>Gear:</h2>
             <li><a href="https://soccerpost.com/?srsltid=AYCX9vKEJo0gmV8SXF3StXUA-LSoqB-X1880BVusZzzbHBNFI85AKpMj"  target="_blank">Soccer Post</a> </li>
             <li>Cleats</li>
@@ -58,6 +64,8 @@
             <li>Space</li>
             <li>Soccer Goal</li>
             <li>Friends</li>
+            <img  id="Soccer-Post1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyP6E-u_zvTvLB1U_bhvxfJg7k6usxPSn8ZobT9SnRkw&s=10" alt="Soccer Gear">
+        </div>
         </ol>
         <div id="flex-wrapper">
         <div id="box">
@@ -73,7 +81,7 @@
         <p>Image From: <a href="https://soccerpost.com/tools/locations/locations/mechanicsburg-soccer-post?srsltid=AYCX9vLArOQ7NcgsFVa0Kn5f0XhUSqADLWU4vUpNsF_IVSLmwM8gntO2" target="_blank">Soccer Post</a> </p>
         
         <button onclick="showHide()"> click me!</button> 
-        <div id="67">
+        
 
         </div>
             <script>
@@ -92,21 +100,13 @@
                     document.getElementById("box").style.backgroundColor = currentColor
                 }
                 function showHide(){
-                    let element = document.getElementById("67")
-                    if (element.style.display == "flex"){
+                    let element = document.getElementById("switch")
+                    if (element.style.display == "grid"){
                         element.style.display = "none"
-                        document.getElementById("showMore").innerHTML = "show More"
+                    }else{
+                    element.style.display = "grid"
+                    }
                 }
-            }
-            else{
-                element.style.display = "flex"
-                document.getElementById("showMore").innerHTML = "show Less"
-            }
-        
-                else{
-                    item.style.display = "flex"
-                }
-            }
             </script>
     </body>
 </html> 
