@@ -92,11 +92,18 @@
                     document.getElementById("box").style.backgroundColor = currentColor
                 }
                 function showHide(){
-                    let item = document.getElementById("67")
-                    if(item.style.display == "flex"){
-                        item.style.display ="none"
-                        document.getElementById("text").innerHTML = "show Less"
-                }else{
+                    let element = document.getElementById("67")
+                    if (element.style.display == "flex"){
+                        element.style.display = "none"
+                        document.getElementById("showMore").innerHTML = "show More"
+                }
+            }
+            else{
+                element.style.display = "flex"
+                document.getElementById("showMore").innerHTML = "show Less"
+            }
+        
+                else{
                     item.style.display = "flex"
                 }
             }
