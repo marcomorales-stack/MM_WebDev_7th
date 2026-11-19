@@ -1,0 +1,107 @@
+<!DOCTYPE html> 
+<html lang = "en">
+    <head>
+        <title>Park City</title>
+        <meta charset="UTF-8">
+        <style>
+            body{
+                color:rgb(65, 65, 240);
+                background-color:black;
+                border: inset 5px #104fc4;
+                font-family:;
+                padding: 25px;
+            }
+             h1{
+               text-align: center;
+            }
+             #S2{
+                border: inset 5px #104fc4;
+                width: 250px;
+                height: 225px;
+            }
+             #S3{
+                border: inset 5px #104fc4;
+                width: 250px;
+                height: 225px;
+            }
+            #S4{
+                border: inset 5px #104fc4;
+                width: 250px;
+                height:225px;
+
+            }
+            #flex-wrapper{
+                display: flex;
+                flex-direction:row;
+                justify-content: space-around;
+                align-items: baseline;
+                flex-wrap: initial;
+                margin-top: 25px;
+                padding: 25px;
+            }
+            #switch{
+               display: none; 
+               flex-wrap: wrap;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        
+    </body>
+    <ol>
+    <div id="S1">
+    <h2>List:</h2>
+        <li><a href=""  target="_blank">Name</a> </li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <img  id="S2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIpOsrPulv2qdqoq7e1jgDBp9BuTM_SrmODs94JfsXmA&s=10" alt="name of place">
+    </div>
+    </ol>
+    <div id="flex-wrapper">
+    <div id="box">
+    <img id="S2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTirkon2VjVco9TrIlbuTborZzUQ4jQH65-OaR-pH6SNQ&s=10" alt="name">
+    <p>Image From: <a href="https://www.rci.com/pre-rci/us/en/vacation-ideas/destinations/park-city-area" target="_blank">Park City</a> </p> 
+    </div> 
+    <div id="box"> 
+    <img id="S3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm3DNJODcttvseJmGSIsnfqlH508DOBSXjKTO7XmJK4Q&s" alt="name">
+    <p>Image From: <a href="https://foundersplace.com/location/" target="_blank">Park City</a> </p>
+    </div>
+    <div id="box"> 
+    <img id="S4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlx8ht5jjB7tz35OknQPfGVvWKSx0atAu77fmzuadNVA&s=10" alt="name" onmouseenter="rotate()">
+    <p>Image From: <a href="https://www.parkcitymag.com/travel-and-outdoors/after-dark-in-the-park/" target="_blank">Park City</a> </p>
+        
+        <button onclick="showHide()"> click me!</button> 
+        
+
+        </div>
+            <script>
+                let images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlx8ht5jjB7tz35OknQPfGVvWKSx0atAu77fmzuadNVA&s=10","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTUu6ASt1tbAov4jDISINV_4mG0m0cUU6XLtyuOk7pmA&s=10"]
+                let currentImage = 0
+                function rotate(){
+                    currentImage += 1
+                    if (currentImage > 1){
+                        currentImage = 0 
+                    }
+                      document.getElementById("S4").src = images[currentImage]
+                    
+                }
+                function changeColor(){
+                    let currentColor = document.getElementById ("newColor").value
+                    document.getElementById("box").style.backgroundColor = currentColor
+                }
+                function showHide(){
+                    let element = document.getElementById("S1")
+                    if (element.style.display == "grid"){
+                        element.style.display = "none"
+                    }else{
+                    element.style.display = "grid"
+                    }
+                }
+            </script>
+    </body>
+</html> 
